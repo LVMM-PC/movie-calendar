@@ -67,8 +67,8 @@ page{
 }
 
 .session-header-more {
-  font-size: 28rpx;
-  color: #32cd32;
+  font-size: 24rpx;
+  color: #808080;
   
   position: relative;
   padding-right: 20rpx;
@@ -82,9 +82,9 @@ page{
   width: 12rpx;
   height: 12rpx;
   transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-  margin-top: -8rpx;
+  margin-top: -6rpx;
   border-width: 2rpx 2rpx 0px 0px;
-  border-color: #32cd32;
+  border-color: #808080;
   border-style: solid;
 }
 
