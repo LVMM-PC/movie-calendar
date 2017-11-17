@@ -9,6 +9,7 @@
   display: inline-block;
   line-height: 11px;
    height: 11px;
+   margin-right:2px;
 }
 
 .stars{
