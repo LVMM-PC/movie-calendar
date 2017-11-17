@@ -57,10 +57,10 @@
 }
 
 .movie-rating {
-  width: 120rpx;
-  height: 120rpx;
-  border: 1px solid #9e9e9e;
-  box-shadow: 4rpx 4rpx 2rpx #e6e6e6;
+  width: 150rpx;
+  height: 150rpx;
+  
+  box-shadow: 0 0px 6px 0 rgba(112, 128, 175, 0.2);
   border-radius: 6rpx;
   display: flex;
   flex-direction: column;
@@ -70,15 +70,15 @@
 
 .movie-rating .average {
   font-size: 36rpx;
-  font-weight: 700;
+  font-weight: 500;
+  color:#4a4a4a;
 }
 
 .movie-rating .rating {
   display: flex;
   flex-direction: row;
   position: inherit;
-  margin-top: 0rpx;
-  margin-bottom: 0rpx;
+  margin: 0rpx 0 20rpx 0;
   align-self: center;
 }
 
