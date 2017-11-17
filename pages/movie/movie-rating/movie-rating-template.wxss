@@ -1,18 +1,14 @@
 .rating {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  margin-top: 10rpx;
   margin-bottom: 10rpx;
+  text-align: left;
+  height:11px;
+    line-height: 11px;
 }
 
 .rating-star {
-  /* display: inline-block; */
-  width: 55px;
-  height: 11px;
-  /* position: absolute; */
-  vertical-align: top;
-  /* background-image: url(../../../images/icon/ic_rating_s.png); */
+  display: inline-block;
+  line-height: 11px;
+   height: 11px;
 }
 
 .stars{
@@ -21,14 +17,14 @@
 .star{
     width:11px;
     height:11px;
-    vertical-align: top;
+    line-height: 11px;
 }
 
 .rating-average {
-  margin-left: 120rpx;
+  display: inline-block;
+  width: 20rpx;
   font-size: 20rpx;
   line-height: 22rpx;
   color: #878787;
   height: 22rpx;
-  vertical-align: top;
 }
