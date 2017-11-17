@@ -10,6 +10,7 @@ Page({
     acquireComingsoon: false,
     intheaters: {},
     comingsoon: {},
+    loadFlag: true
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -62,6 +63,7 @@ Page({
       icon: 'loading',
       duration: 10000
     });
+    
     wx.request({
       url: url,
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
@@ -117,6 +119,7 @@ Page({
           movies: movies
         }
         that.setData(readyData);
+        that.data.loadFlag = true;
       },
       fail: function () {
         // fail
@@ -126,6 +129,7 @@ Page({
         wx.hideToast();
       }
     });
+   
   },
   /** 切换标签页 */
   bindSelected: function (event) {
@@ -161,14 +165,17 @@ Page({
   },
   /** 页面滑动到底部 */
   handleLower: function (event) {
-    console.log("handleLower");
+   
     var typeId = "";
     if (this.data.showIntheaters) {
       typeId = "intheaters";
     } else {
       typeId = "comingsoon";
     }
-    this.getMovieListData(typeId);
+    if (this.data.loadFlag) {
+      this.data.loadFlag = false;
+      this.getMovieListData(typeId);
+    }
   },
   /** 页面滑动到顶部 */
   handleUpper: function (event) {
