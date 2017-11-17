@@ -67,13 +67,13 @@
     display:none;
 }
 .inner-comment{
-    padding: 20px;
+    padding: 20rpx;
     color: #333;
     font-size: 16px;
     border-radius: 5px;
     background:#fcfcfc;
     box-shadow: 0px 0px 8px 0px rgba(50,86,123,0.16);
-    width:580rpx;
+    width:610rpx;
     margin:0 auto;
 }
 .inner-comment text{
@@ -88,21 +88,18 @@
 }
 .movie-average{
     float:left;
-    color: #808080;
-    font-weight:400;
-    margin-right:10px;
-    height: 44rpx;
-    line-height: 44rpx;  
+    color: #888;
+    font-weight:300;
+    margin-right:10px;  
     font-size:28rpx;
 }
 .stars{
   float:left;
 }
 .star{
-    width:16px;
-    height:16px;
-    margin: 2px;
-    vertical-align: top;
+    width:32rpx;
+    height:32rpx;
+    margin:4rpx 4rpx 0;
 }
 .inner-from {
   margin-left: 20rpx;
