@@ -11,7 +11,7 @@
         <text class="casts">主演：{{casts}}</text>
         <text class="genres">类型：{{genres}}</text>
         <template is="rating-template" data="{{rating}}" />
-        <text class="wish-count" style="color:#9bdff9;">{{collectCount}}人想看</text>
+        <text class="wish-count" style="color:#f1a95d;">{{collectCount}}人想看</text>
       </view>
       <block wx:if="{{typeId == 'comingsoon'}}">
         <text class="wish-btn" style="color:#de9703;border-color:#de9703" catchtap="handleWishtap">想看</text>

@@ -2,7 +2,8 @@
 .calendar-container{
     position: relative;
     height: 100%;
-    padding: 10px;
+    padding: 20px 10px 10px;
+    font-weight:300;
 }
 .loading{
     position: absolute;
@@ -48,13 +49,15 @@
     text-align: center;
     font-size: 180px;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -5px;
+    margin:10px 0;
 }
 .date-show-year{
     text-align: center;
     font-size: 16px;
     margin-bottom: 10rpx;
+    color:#808080;
 }
 .date-directors{
     text-align: center;
@@ -65,10 +68,12 @@
     display:none;
 }
 .inner-comment{
-    padding: 10px;
+    padding: 20px;
     color: #333;
     font-size: 16px;
-    min-height: 140rpx;
+    border-radius: 5px;
+    background:#fcfcfc;
+    box-shadow: 0px 0px 8px 0px rgba(50,86,123,0.16);
 }
 .inner-comment text{
     color:#888;
@@ -76,13 +81,17 @@
 .inner-movie{
   padding: 10px;
   display: flex;
-  margin-left: 40rpx;
  
 }
 .movie-average{
     font-size:40px;
     line-height:40px;
     margin-right: 10px;
+    color: #494949;
+    font-weight:500;
+}
+.stars{
+  margin:0 0 0 7px;
 }
 .star{
     width:16px;

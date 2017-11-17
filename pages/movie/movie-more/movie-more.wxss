@@ -35,7 +35,6 @@
 .tab-name {
   flex: 1;
   font-size: 32rpx;
-  font-weight: 600;
   height: 84rpx;
   line-height: 84rpx;
   text-align: center;

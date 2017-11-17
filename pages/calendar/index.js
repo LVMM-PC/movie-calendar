@@ -4,70 +4,70 @@ var app = getApp()
 Page({
   data: {
     //"year":0,
-    "month":0,
-    "day":0,
-    "week":0,
-    "show_year":0,
-    "comment":'',
-    "directors":'',
-    "title":'',
-    "average":'',
-    "stars":'',
+    "month": 0,
+    "day": 0,
+    "week": 0,
+    "show_year": 0,
+    "comment": '',
+    "directors": '',
+    "title": '',
+    "average": '',
+    "stars": '',
     "loading_opacity": 1,
-    "animationData":'',
+    "animationData": '',
     "chineseDate": ''
   },
   //页面初次渲染完成
   onReady: function (e) {
     this.showDate();
-    var _this = this,todayDate = this.data.year+''+this.data.month+''+this.data.day;
+    var _this = this, todayDate = this.data.year + '' + this.data.month + '' + this.data.day;
     var today = new Date(),
       todayDate = today.toLocaleDateString().replace(/\//g, '-');
     wx.getStorage({
       key: 'movie',
-      success: function(res) {
-        if(res.data.date==todayDate){
+      success: function (res) {
+        if (res.data.date == todayDate) {
           //wx.clearStorage(res.data.movieData)
           _this.setData(res.data.movieData);
           _this.loading();
-        }else{
+        } else {
           _this.loadMovie();
         }
       },
-      fail: function() {
+      fail: function () {
         _this.loadMovie();
       }
     })
   },
   // 页面初始化
-  onLoad:function(options){},
+  onLoad: function (options) { },
   //显示日期，年月日
-  showDate:function(){
-    var today = new Date(),_this = this,year = today.getFullYear()+'',i = 0,chineseYear='',week = today.getDay();
+  showDate: function () {
+    var today = new Date(), _this = this, year = today.getFullYear() + '', i = 0, chineseYear = '', week = today.getDay();
     //将年份转换为中文
-    do{
-      chineseYear = chineseYear+app.chineseDate.years[year.charAt(i)]
+    do {
+      chineseYear = chineseYear + app.chineseDate.years[year.charAt(i)]
       i++;
-    }while(i<year.length)
+    } while (i < year.length)
     //设置数据
     _this.setData({
-       //"year":chineseYear,
-       "month":app.chineseDate.months[today.getMonth()],
-       "day":today.getDate(),
-       "week":app.chineseDate.years[week] 
-     })
+      //"year":chineseYear,
+      "month": app.chineseDate.months[today.getMonth()],
+      "day": today.getDate(),
+      "week": app.chineseDate.years[week]
+    })
   },
   //加载top250电影信息
-  loadMovie: function(){
+  loadMovie: function () {
     var _this = this,
-        //请求发送的数据，随机的起始值和条数（只需要一条）
-        reqData = {
-          start:Math.floor(Math.random()*250),
-          count:1
-        };
-   
+      //请求发送的数据，随机的起始值和条数（只需要一条）
+      reqData = {
+        start: Math.floor(Math.random() * 250),
+        count: 1
+      };
+
     //获取电影数据
-    var today = new Date(), 
+    var today = new Date(),
       date = today.toLocaleDateString().replace(/\//g, '-');
 
     wx.request({
@@ -113,49 +113,49 @@ Page({
     // };
     // _this.setData(renderData);
     // _this.loading();
-    
-    
+
+
   },
   //计算行星显示规则
-  starCount:function(originStars){
+  starCount: function (originStars) {
     //计算星星显示需要的数据，用数组stars存储五个值，分别对应每个位置的星星是全星、半星还是空星
-    var starNum = originStars/10,stars = [],i = 0;
-    do{
-      if(starNum>=1){
+    var starNum = originStars / 10, stars = [], i = 0;
+    do {
+      if (starNum >= 1) {
         stars[i] = 'full';
-      }else if(starNum>=0.5){
+      } else if (starNum >= 0.5) {
         stars[i] = 'half';
-      }else{
+      } else {
         stars[i] = 'no';
       }
       starNum--;
       i++;
-    }while(i<5)
+    } while (i < 5)
     return stars;
   },
   //加载动画
-  loading:function(){
+  loading: function () {
     var animation = wx.createAnimation({
       duration: 1000,
       timingFunction: "ease"
     })
     animation.opacity(1).step()
     this.setData({
-      animationData:animation.export()
+      animationData: animation.export()
     })
   },
   //将数据进行本地存储
-  storeData: function(date,movieData){
+  storeData: function (date, movieData) {
     wx.setStorage({
-      key:"movie",
-      data:{
-        date:date,
-        movieData:movieData
+      key: "movie",
+      data: {
+        date: date,
+        movieData: movieData
       }
     })
   },
   //点击日历电影
-  gotoDetail: function(event){
+  gotoDetail: function (event) {
     wx.showToast({
       title: '加载中',
       icon: 'loading',
@@ -171,7 +171,7 @@ Page({
         // success
         var data = res.data;
         //判断是否有值
-        if (data.subjects.length !== 0){
+        if (data.subjects.length !== 0) {
           that.processSearchData(data.subjects[0].id)
         }
         //that.processSearchData(data);
@@ -186,7 +186,7 @@ Page({
     });
   },
   //进入日历电影详情
-  processSearchData:function(id){
+  processSearchData: function (id) {
     wx.hideToast();
     wx.navigateTo({
       url: '/pages/movie/movie-detail/movie-detail?id=' + id

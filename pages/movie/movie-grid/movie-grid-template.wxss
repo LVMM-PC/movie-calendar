@@ -27,9 +27,8 @@
 
 .movie-wrapper .name {
   width: 200rpx;
-  color: #4a4a4a;
+  color: #000;
   font-size: 28rpx;
-  font-weight: 600;
   text-align: center;
   line-height: 1.6;
   word-break: keep-all;
@@ -41,5 +40,5 @@
 .movie-wrapper .wish-count {
   color: #9e9e9e;
   font-size: 24rpx;
-  font-weight: 500;
+
 }

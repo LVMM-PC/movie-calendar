@@ -16,6 +16,9 @@ page {
   line-height: 1.42857;
 } */
 
+page{
+  font-weight:300;
+}
 .container {
   width: 100%;
   min-height: 100%;
@@ -59,14 +62,14 @@ page {
   color: #4a4a4a;
   font-size: 36rpx;
   line-height: 1.42857;
-  font-weight: 500;
+  
   flex: 1;
 }
 
 .session-header-more {
   font-size: 28rpx;
   color: #32cd32;
-  font-weight: 500;
+  
   position: relative;
   padding-right: 20rpx;
 }

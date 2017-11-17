@@ -67,7 +67,6 @@
   width: 100%;
   font-size: 32rpx;
   color: #4a4a4a;
-  font-weight: 600;
 }
 
 .movie-content .desc {
