@@ -7,57 +7,21 @@
 }
 
 .rating-star {
-  content: "";
-  display: inline-block;
+  /* display: inline-block; */
   width: 55px;
   height: 11px;
-  position: absolute;
-  background-repeat: no-repeat;
+  /* position: absolute; */
+  vertical-align: top;
   /* background-image: url(../../../images/icon/ic_rating_s.png); */
 }
 
-.allstar10 {
-  background-position: 0px 0px;
+.stars{
+  margin:0 0 0 7px;
 }
-
-.allstar9 {
-  background-position: 0px -11px;
-}
-
-.allstar8 {
-  background-position: 0px -22rpx;
-}
-
-.allstar7 {
-  background-position: 0px -33px;
-}
-
-.allstar6 {
-  background-position: 0px -44px;
-}
-
-.allstar5 {
-  background-position: 0px -55px;
-}
-
-.allstar4 {
-  background-position: 0px -66px;
-}
-
-.allstar3 {
-  background-position: 0px -77px;
-}
-
-.allstar2 {
-  background-position: 0px -88px;
-}
-
-.allstar1 {
-  background-position: 0px -99px;
-}
-
-.allstar0 {
-  background-position: 0px -110px;
+.star{
+    width:11px;
+    height:11px;
+    vertical-align: top;
 }
 
 .rating-average {
@@ -66,4 +30,5 @@
   line-height: 22rpx;
   color: #878787;
   height: 22rpx;
+  vertical-align: top;
 }

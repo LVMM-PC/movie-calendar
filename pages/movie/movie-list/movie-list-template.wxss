@@ -10,12 +10,13 @@
   border-bottom: 0px solid #e6e6e6;
 }
 
-.movie-content {
+ .movie-content {
   display: flex;
   flex-direction: row;
-}
+} 
 
 .movie-content .poster {
+  display: inline-block;
   width: 160rpx;
   height: 236rpx;
 }
@@ -23,7 +24,7 @@
 .movie-content .movie-summary {
   width: 550rpx;
   display: flex;
-  flex-direction: column;
+   flex-direction: column; 
   margin-left: 20rpx;
   margin-right: 20rpx;
 }

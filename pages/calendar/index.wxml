@@ -9,8 +9,9 @@
             <view class="date-show-year">{{time}}</view>
           
         </view>
+        <view bindtap='gotoDetail'>
         <view class="inner-comment">{{comment}}<text class='inner-from' wx:if="{{from}}">——ID：{{from}}</text></view>
-        <view class="inner-movie" bindtap='gotoDetail' data-name="{{movie}}">  
+        <view class="inner-movie"  data-name="{{movie}}">  
             <text class="title">《{{movie}}》</text>
             <view class="movie-info">
                 <view class="movie-average">豆瓣评分:{{average}}</view>         
@@ -19,8 +20,8 @@
                         <image src="../../images/{{item}}-star.png" mode="aspectFit" class="star"></image>
                     </block>
                 </view>
-                
             </view>
         </view>
+        </view>      
     </view>
 </view>

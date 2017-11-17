@@ -13,22 +13,19 @@
     </view>
     <view class="movie-rating">
       <text class="average">{{movie.rating.average}}</text>
-      <!-- <view class="rating">
-        <view class="rating-star allstar{{movie.rating.average | 0}}"></view>
-      </view> -->
-       <view class="rating">
+        <view class="rating">
           <block wx:for="{{movie.stars}}"  wx:for-item="item">
               <image src="../../../images/{{item}}-star.png" mode="aspectFit" class="star"></image>
           </block>
-      </view> 
+        </view> 
       <text class="ratings_count">{{movie.ratingsCount}}</text>
       
     </view>
   </view>
-  <view class="wish-do-session">
+  <!-- <view class="wish-do-session">
     <text class="wish-btn" catchtap="handleWishtap">想看</text>
     <text class="do-btn" data-id="{{movie.id}}" catchtap="handleDotap">看过</text>
-  </view>
+  </view> -->
   <view class="desc-session">
     <text class="title">简介</text>
     <block wx:if="{{movie.summary.length > 0}}">

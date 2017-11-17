@@ -1,6 +1,11 @@
 <template name="rating-template">
   <view class="rating">
-    <view class="rating-star allstar{{rating.average | 0}}"></view>
+    <!-- <view class="rating-star allstar{{rating.average | 0}}"></view> -->
+     <view class="rating-star">
+        <block wx:for="{{rating.stars}}"  wx:for-item="item">
+            <image src="../../../images/{{item}}-star.png" mode="aspectFit" class="star"></image>
+        </block>
+      </view> 
     <text class="rating-average">{{rating.average}}</text>
   </view>
 </template>
