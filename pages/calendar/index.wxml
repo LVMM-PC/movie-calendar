@@ -9,9 +9,9 @@
             <view class="date-show-year">{{time}}</view>
           
         </view>
-        <view bindtap='gotoDetail'>
+        <view bindtap='gotoDetail' data-name="{{movie}}">
         <view class="inner-comment">{{comment}}<text class='inner-from' wx:if="{{from}}">——ID：{{from}}</text></view>
-        <view class="inner-movie"  data-name="{{movie}}">  
+        <view class="inner-movie"  >  
             <text class="title">《{{movie}}》</text>
             <view class="movie-info">
                 <view class="movie-average">豆瓣评分:{{average}}</view>         
