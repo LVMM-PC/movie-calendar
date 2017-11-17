@@ -1,0 +1,96 @@
+/**index.wxss**/
+.calendar-container{
+    position: relative;
+    height: 100%;
+    padding: 10px;
+}
+.loading{
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:120rpx;
+    height:120rpx;
+    margin-left: -60rpx;
+    margin-top: -60rpx;
+}
+.container-inner{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin-bottom: 10px;
+    
+    opacity:0;
+}
+.inner-date{
+    flex-grow: 1;
+    border-bottom:1px solid #333;
+    padding-bottom: 20rpx;
+    width: 560rpx;
+    margin: 0 auto;
+    margin-bottom: 60rpx;
+}
+.date-year-month{
+    margin: 10rpx auto;
+    text-align: center;
+    line-height: 60rpx;
+    height: 60rpx;
+    border-bottom:1px solid #333;
+    border-top:1px solid #333;
+    width: 560rpx;
+}
+.date-year-month text{
+    font-size: 14px;
+    padding: 0 26rpx;
+}
+
+.date-day{
+    text-align: center;
+    font-size: 180px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    letter-spacing: -5px;
+}
+.date-show-year{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10rpx;
+}
+.date-directors{
+    text-align: center;
+    color:#AAA;
+    font-size: 12px;
+}
+.date-directors text:last-child text{
+    display:none;
+}
+.inner-comment{
+    padding: 10px;
+    color: #333;
+    font-size: 16px;
+    min-height: 140rpx;
+}
+.inner-comment text{
+    color:#888;
+}
+.inner-movie{
+  padding: 10px;
+  display: flex;
+  margin-left: 40rpx;
+ 
+}
+.movie-average{
+    font-size:40px;
+    line-height:40px;
+    margin-right: 10px;
+}
+.star{
+    width:16px;
+    height:16px;
+    margin: 2px;
+    vertical-align: top;
+}
+.inner-from {
+  margin-left: 20rpx;
+  font-size: 12px；
+}

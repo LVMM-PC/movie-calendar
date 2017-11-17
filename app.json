@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/calendar/index",
+    "pages/movie/movie",
+    "pages/search/index",
+    "pages/movie/search/search",
+    "pages/movie/movie-more/movie-more",
+    "pages/movie/selected/selected",
+    "pages/movie/movie-detail/movie-detail",
+    "pages/movie/movie-detail/rating/rating",
+    "pages/movie/movie-detail/celebrity/celebrity",
+    "pages/movie/movie-detail/movie-poster/movie-poster"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电影日历",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#35495e",
+    "borderStyle": "white",
+    "backgroundColor": "#f5f5f5",
+    "list": [
+      {
+        "text": "日历",
+        "pagePath": "pages/calendar/index",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order_fill.png"
+      },
+      {
+        "text": "电影",
+        "pagePath": "pages/movie/movie",
+        "iconPath": "images/live.png",
+        "selectedIconPath": "images/live_fill.png"
+      },
+      {
+        "text": "搜索",
+        "pagePath": "pages/search/index",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search_fill.png"
+      }
+    ]
+  }
+}

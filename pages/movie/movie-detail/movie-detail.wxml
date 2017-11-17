@@ -1,0 +1,56 @@
+
+<!--pages/movie/movie-detail/movie-detail.wxml-->
+<view class="container">
+  <view class="session-poster session-poster-spacing">
+    <image class="poster" src="{{movie.images.large}}" bindtap="bindPoster" data-poster-url="{{movie.images.large}}"></image>
+  </view>
+  <view class="summary-session">
+    <view class="movie-summary">
+      <text class="name">{{movie.title}}</text>
+      <text class="subtype">{{movie.year}}/{{movie.genres}}</text>
+      <text class="origin-name">{{movie.originalTitle}}</text>
+      <text class="countries">{{movie.countries}}</text>
+    </view>
+    <view class="movie-rating">
+      <text class="average">{{movie.rating.average}}</text>
+      <!-- <view class="rating">
+        <view class="rating-star allstar{{movie.rating.average | 0}}"></view>
+      </view> -->
+       <view class="rating">
+          <block wx:for="{{movie.stars}}"  wx:for-item="item">
+              <image src="../../../images/{{item}}-star.png" mode="aspectFit" class="star"></image>
+          </block>
+      </view> 
+      <text class="ratings_count">{{movie.ratingsCount}}</text>
+      
+    </view>
+  </view>
+  <view class="wish-do-session">
+    <text class="wish-btn" catchtap="handleWishtap">想看</text>
+    <text class="do-btn" data-id="{{movie.id}}" catchtap="handleDotap">看过</text>
+  </view>
+  <view class="desc-session">
+    <text class="title">简介</text>
+    <block wx:if="{{movie.summary.length > 0}}">
+      <view class="desc-wrapper">
+        <text class="desc-content {{showAllDesc ? 'desc-content-auto' : 'desc-content-3line'}}">{{movie.summary}}</text>
+        <block wx:if="{{!showAllDesc}}">
+          <text class="extension" bindtap="handleExtensiontap">展开</text>
+        </block>
+      </view>
+    </block>
+  </view>
+  <view class="directors-casts-session">
+    <view class="title">影人</view>
+    <scroll-view class="directors-casts-scroll" scroll-x="true">
+      <block wx:for="{{movie.directorsAndCasts}}" wx:for-item="item">
+        <view class="directors-casts-wrapper" bindtap="handleCelebrity" data-id="{{item.id}}" data-avatar="{{item.avatars.large}}">
+          <view class="directors-casts-content">
+            <image class="image" src="{{item.avatars.small}}"></image>
+            <text class="name">{{item.name}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
