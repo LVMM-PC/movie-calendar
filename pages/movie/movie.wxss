@@ -12,3 +12,7 @@
   margin-left: 20rpx;
   color: #9e9e9e;
 }
+.selected-scroll {
+  display: flex;
+  justify-content: center;
+}

@@ -210,7 +210,7 @@ Page({
         readyData[type].categoryTitle = "豆瓣Top250";
         readyData[type].desc = "8分以上好电影";
     }else if(type === 'usBox') {
-        readyData[type].categoryTitle = "票房榜";
+        readyData[type].categoryTitle = "北美票房榜";
         readyData[type].desc = dateString;
     }
 
