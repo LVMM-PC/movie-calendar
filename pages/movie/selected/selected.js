@@ -38,19 +38,14 @@ Page({
   getMovieListData: function (typeId) {
     var that = this;
     var offset = 0;
-    var url = app.globalData.doubanBase + app.globalData.top250;
+    var url = app.globalData.doubanBase;
     if (typeId == "top250") {
       offset = that.data.offset || 0;
-      url += "?start=" + offset + "&&count=5";
-    } else if (typeId == "weekly") {
-      offset = that.data.offset || 50;
-      url += "?start=" + offset + "&&count=5";
-    } else if (typeId == "newMovie") {
-      offset = that.data.offset || 100;
-      url += "?start=" + offset + "&&count=5";
+      url += app.globalData.top250 + "?start=0&&count=5";
+    } else if (typeId == "usBox") {
+      url += app.globalData.usBox + "?start=0&&count=5";
     } else {
-      offset = that.data.offset || 150;
-      url += "?start=" + offset + "&&count=5";
+
     }
 
     that.setData({
@@ -74,12 +69,16 @@ Page({
       header: { 'content-type': 'json' }, // 设置请求的 header
       success: function (res) {
         var subjects = res.data.subjects;
+
         var movies = that.data.movies || [];
         var offset = that.data.offset || 0;
         var total = res.data.total;
         offset += subjects.length;
         for (let idx in subjects) {
           var subject = subjects[idx];
+          if(typeId === 'usBox'){
+              subject = subjects[idx].subject;
+          }
           var directors = "";
           for (let i in subject.directors) {
             directors += subject.directors[i].name;

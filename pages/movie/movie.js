@@ -9,8 +9,6 @@ Page({
     inTheaters: {},   // 影院热映
     comingSoon: {},    // 即将上映
     top250: {},        // 豆瓣Top250
-    weekly: {},        // 口碑榜
-    newMovie: {},       //  新片榜
     usBox: {}            // 票房榜
   },
   onLoad: function (options) {
@@ -20,6 +18,7 @@ Page({
 
     this.getMovieListData(inTheatersURL, "inTheaters", "影院热映");
     this.getMovieListData(comingSoonURL, "comingSoon", "即将上映");
+    this.getSelectedListData();
   },
   onReady: function () {
     // 页面渲染完成
@@ -102,19 +101,19 @@ Page({
     this.setData(readyData);
   },
   /** 滑动屏幕 */
-  handleTouchMove: function (event) {
+  /*handleTouchMove: function (event) {
     var offsetTop = event.target.offsetTop;
-    //console.log("handleTouchMove offsetTop: " + offsetTop);
     if (offsetTop > 10 && !this.data.acquiredSelected) {
       this.getSelectedListData();
     }
-  },
+  },*/
   /** 获取电影榜单数据 */
   getSelectedListData: function () {
     var that = this;
-    // 豆瓣口碑榜，新片榜是高级接口，票房榜不可用，这里用豆瓣Top250数据 
+    // 豆瓣口碑榜，新片榜是高级接口
     var top250URL = app.globalData.doubanBase + app.globalData.top250 + "?start=0&&count=12";
-    //console.log("handleTouchMove top250URL: " + top250URL);
+    var usBoxUrl = app.globalData.doubanBase + app.globalData.usBox + "?start=0&&count=12";
+
     if (!this.data.acquiredSelected) {
       var readyData = {};
       readyData["acquiredSelected"] = {
@@ -128,7 +127,7 @@ Page({
         duration: 10000
       });
 
-      // 请求电影数据
+      // 请求电影数据，250
       wx.request({
         url: top250URL,
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
@@ -136,7 +135,7 @@ Page({
         success: function (res) {
           // 组装电影数据
           var data = res.data;
-          that.processSelectedListData(data);
+          that.processSelectedListData(data,'top250');
         },
         fail: function () {
           // fail
@@ -146,16 +145,34 @@ Page({
           wx.hideToast();
         }
       });
+      //票房榜
+        wx.request({
+            url: usBoxUrl,
+            method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+            header: { 'content-type': "json" }, // 设置请求的 header
+            success: function (res) {
+                // 组装电影数据
+                var data = res.data;
+                that.processSelectedListData(data,'usBox');
+            },
+            fail: function () {
+                // fail
+            },
+            complete: function () {
+                // complete
+                wx.hideToast();
+            }
+        });
     }
   },
   /** 组装榜单数据 */
-  processSelectedListData: function (data) {
-    var top250 = [];
-    var weekly = [];
-    var newMovie = [];
-    var usBox = [];
-    for (let idx in data.subjects) {
+  processSelectedListData: function (data,type) {
+    var resArr = []
+    for (let idx = 0;idx <3;idx++) {
       var subject = data.subjects[idx];
+      if(type === 'usBox'){
+          subject = data.subjects[idx].subject;
+      }
       var temp = {
         id: subject.id,
         title: subject.title,
@@ -167,15 +184,7 @@ Page({
         casts: subject.casts,
         year: subject.year
       };
-      if (idx < 3) {
-        top250.push(temp);
-      } else if (idx < 6) {
-        weekly.push(temp);
-      } else if (idx < 9) {
-        newMovie.push(temp);
-      } else {
-        usBox.push(temp);
-      }
+        resArr.push(temp);
     }
 
     var date = new Date();
@@ -191,30 +200,19 @@ Page({
     var dateString = (month + 1) + "月" + dayOfDate + "日" + "-" + month2 + "月" + dayOfDate2 + "日";
 
     var readyData = {};
-    readyData["top250"] = {
-      categoryType: "top250",
-      categoryTitle: "豆瓣Top250",
-      desc: "8分以上好电影",
-      movies: top250
-    };
-    readyData["weekly"] = {
-      categoryType: "weekly",
-      categoryTitle: "口碑榜",
-      desc: dateString,
-      movies: weekly
-    };
-    readyData["newMovie"] = {
-      categoryType: "newMovie",
-      categoryTitle: "新片榜",
-      desc: dateString,
-      movies: newMovie
-    };
-    readyData["usBox"] = {
-      categoryType: "usBox",
-      categoryTitle: "票房榜",
-      desc: dateString,
-      movies: usBox
-    };
+      readyData[type] = {
+          categoryType: type,
+          categoryTitle: "",
+          desc: "",
+          movies: resArr
+      };
+    if(type === 'top250'){
+        readyData[type].categoryTitle = "豆瓣Top250";
+        readyData[type].desc = "8分以上好电影";
+    }else if(type === 'usBox') {
+        readyData[type].categoryTitle = "票房榜";
+        readyData[type].desc = dateString;
+    }
 
     this.setData(readyData);
   },

@@ -1,7 +1,7 @@
 <!--/pages/movie/movie.wxml-->
 <import src="/pages/movie/movie-grid/movie-grid-template.wxml" />
 <import src="/pages/movie/selected-grid/selected-grid-template.wxml" />
-<view class="container" bindtouchmove="handleTouchMove">
+<view class="container" >
   <!-- <view class="session-search session-search-spacing">
     <icon class="session-search-icon" type="search" size="16"></icon>
     <text class="search-placeholder" bindtap="bindSearchNavigate">搜索电影</text>
@@ -38,7 +38,7 @@
     </view>
     <view class="session-content session-content-spacing">
       <scroll-view class="selected-scroll" scroll-x="true">
-        <block wx:for="{{[top250, weekly, newMovie, usBox]}}" wx:for-item="selected">
+        <block wx:for="{{[top250, usBox]}}" wx:for-item="selected">
           <template is="selected-grid-template" data="{{selected}}" />
         </block>
       </scroll-view>
