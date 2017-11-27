@@ -97,7 +97,7 @@ Page({
   /** 点击进入搜索条目 */
   handletap: function (event) {
     var id = event.currentTarget.dataset.id;
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/movie/movie-detail/movie-detail?id=' + id
     })
   }
