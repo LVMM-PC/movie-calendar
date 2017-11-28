@@ -25,7 +25,7 @@
 .inner-date{
     flex-grow: 1;
     border-bottom:1px solid #494949;
-    padding-bottom: 20rpx;
+    padding-bottom: 50rpx;
     width: 650rpx;
     margin: 0 auto;
     margin-bottom: 70rpx;
@@ -47,7 +47,7 @@
 .date-day{
     text-align: center;
     font-size: 180px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif/*'PingFang SC',roboto*/;
     font-weight: 500;
     letter-spacing: -5px;
     margin:10px 0;
@@ -56,7 +56,7 @@
     text-align: center;
     font-size: 16px;
     margin-bottom: 10rpx;
-    color:#808080;
+    color:#3A3A3A;
 }
 .date-directors{
     text-align: center;
@@ -68,13 +68,13 @@
 }
 .inner-comment{
     padding: 30rpx;
-    color: #333;
+    color: #3A3A3A;
     font-size: 28rpx;
     border-radius: 4px;
     background:#fcfcfc;
     box-shadow: 0px 0px 3px 0px rgba(50,86,123,0.2);
     /*border:2rpx solid #e0e0e0;*/
-    width:600rpx;
+    width:590rpx;
     margin:0 auto;
 }
 .inner-comment text{
@@ -89,9 +89,9 @@
 }
 .movie-average{
     float:left;
-    color: #a6a6a6;
+    color: #3A3A3A;
     font-weight:300;
-    margin-right:10px;  
+    margin-right:10rpx;  
     font-size:28rpx;
 }
 .stars{
@@ -100,7 +100,7 @@
 .star{
     width:28rpx;
     height:28rpx;
-    margin:4rpx 4rpx 0;
+    margin:4rpx 0 0 8rpx;
 }
 .inner-from {
   margin-left: 20rpx;
@@ -108,7 +108,7 @@
 }
 .inner-movie .title{
   float:left;
-  color:#666;
+  color:#3A3A3A;
 }
 .inner-movie .movie-info{
   float:right;
