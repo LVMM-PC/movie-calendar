@@ -106,3 +106,10 @@
   word-break: break-all;
   white-space: pre-wrap;
 }
+.directors,.casts,.genres {
+  font-size: 14px;
+  color: #666
+}
+.directors {
+  margin-top: 20rpx
+}

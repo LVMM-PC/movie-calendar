@@ -91,6 +91,12 @@ Page({
             casts += subject.casts[j].name + separate;
           }
           casts = casts.substring(0, casts.length - separate.length);
+
+          var genres = "" ;
+          for (let k in subject.genres) {
+            genres += subject.genres[k] + separate;
+          }
+          genres = genres.substring(0, genres.length - separate.length);
           //计算星星数
           subject.rating.stars = that.starCount(subject.rating.stars);
           var temp = {
@@ -103,7 +109,8 @@ Page({
             directors: directors,
             casts: casts,
             typeId: typeId,
-            year: subject.year
+            year: subject.year,
+            genres: genres
           };
           movies.push(temp);
         }
