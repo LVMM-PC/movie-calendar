@@ -23,6 +23,9 @@ Page({
     var _this = this, todayDate = this.data.year + '' + this.data.month + '' + this.data.day;
     var today = new Date(),
       todayDate = today.toLocaleDateString().replace(/\//g, '-');
+    wx.showShareMenu({
+      withShareTicket: true
+    })
     wx.getStorage({
       key: 'movie',
       success: function (res) {

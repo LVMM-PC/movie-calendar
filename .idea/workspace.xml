@@ -24,35 +24,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selected-grid-template.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/movie/selected-grid/selected-grid-template.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="89" lean-forward="false" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="movie.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/movie/movie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="212" column="43" lean-forward="false" selection-start-line="212" selection-start-column="43" selection-end-line="212" selection-end-column="43" />
+            <state relative-caret-position="1936">
+              <caret line="235" column="43" lean-forward="false" selection-start-line="235" selection-start-column="43" selection-end-line="235" selection-end-column="43" />
               <folding>
-                <element signature="e#962#1588#0" expanded="false" />
-                <element signature="e#1672#2640#0" expanded="false" />
+                <marker date="1511861124626" expanded="true" signature="312:550" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="selected.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/movie/selected/selected.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -81,7 +60,7 @@
         <entry file="file://E:/svn/pages/store/我的门店/3.3门店管理.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="438">
-              <caret line="132" column="6" lean-forward="true" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
+              <caret line="132" column="6" lean-forward="false" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -97,11 +76,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="upload.html" pinned="false" current-in-tab="false">
         <entry file="file://E:/svn/pages/store/我的门店/upload.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="select.css" pinned="false" current-in-tab="false">
+        <entry file="file://E:/svn/pic/styles/liner/v17/select.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="629" column="17" lean-forward="false" selection-start-line="629" selection-start-column="17" selection-end-line="629" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report.html" pinned="false" current-in-tab="true">
+        <entry file="file://E:/svn/pages/store/门店三期/report.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1744" column="38" lean-forward="false" selection-start-line="1744" selection-start-column="38" selection-end-line="1744" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -126,6 +125,7 @@
       <find>acquiredSelected</find>
       <find>bindSelected</find>
       <find>cerDialog</find>
+      <find>.cabin-list .cl-center</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,6 +138,8 @@
         <option value="$PROJECT_DIR$/pages/movie/selected/selected.js" />
         <option value="$PROJECT_DIR$/pages/movie/movie.js" />
         <option value="E:/svn/pages/store/我的门店/js/storeHtml.js" />
+        <option value="E:/svn/pic/styles/liner/v17/select.css" />
+        <option value="E:/svn/pages/store/门店三期/report.html" />
       </list>
     </option>
   </component>
@@ -147,7 +149,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -211,7 +213,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../inland-detail" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
@@ -238,15 +240,15 @@
       <option name="presentableId" value="Default" />
       <updated>1511771684364</updated>
       <workItem from="1511771685688" duration="4698000" />
-      <workItem from="1511832018068" duration="1759000" />
+      <workItem from="1511832018068" duration="5102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6457000" />
+    <option name="totallyTimeSpent" value="9800000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14278187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -360,11 +362,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/movie/movie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="212" column="43" lean-forward="false" selection-start-line="212" selection-start-column="43" selection-end-line="212" selection-end-column="43" />
+        <state relative-caret-position="1936">
+          <caret line="235" column="43" lean-forward="false" selection-start-line="235" selection-start-column="43" selection-end-line="235" selection-end-column="43" />
           <folding>
-            <element signature="e#962#1588#0" expanded="false" />
-            <element signature="e#1672#2640#0" expanded="false" />
+            <marker date="1511861124626" expanded="true" signature="312:550" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -372,7 +373,7 @@
     <entry file="file://E:/svn/pages/store/我的门店/3.3门店管理.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
-          <caret line="132" column="6" lean-forward="true" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
+          <caret line="132" column="6" lean-forward="false" selection-start-line="132" selection-start-column="6" selection-end-line="132" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -397,6 +398,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/svn/pic/styles/liner/v17/select.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="629" column="17" lean-forward="false" selection-start-line="629" selection-start-column="17" selection-end-line="629" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/svn/pages/store/门店三期/report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1744" column="38" lean-forward="false" selection-start-line="1744" selection-start-column="38" selection-end-line="1744" selection-end-column="38" />
           <folding />
         </state>
       </provider>

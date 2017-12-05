@@ -4,7 +4,8 @@
 <template name="movie-list-template">
   <view class="movie-wrapper" bindtap="bindMovieDetail" data-id="{{id}}">
     <view class="movie-content">
-    <image class='poster' src="{{images.medium}}"></image>
+    <div class='poster-wrapper'><image class='poster' src="{{images.medium}}"></image></div>
+    
       <view class="movie-summary">
         <text class="name">{{title}}</text>
         <text class="directors">导演：{{directors}}</text>

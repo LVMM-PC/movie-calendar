@@ -20,6 +20,10 @@
   width: 160rpx;
   height: 236rpx;
 }
+.poster-wrapper {
+  width: 160rpx;
+  height: 236rpx;
+}
 
 .movie-content .movie-summary {
   width: 550rpx;
