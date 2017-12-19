@@ -3,7 +3,9 @@ var app = getApp();
 Page({
   data: {
     typeTitle: "",
-    scrollFlag: true
+    scrollFlag: true,
+    currentNum:0,
+    noMoreData: false
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -43,9 +45,9 @@ Page({
     that.data.scrollFlag = false;
     if (typeId == "top250") {
       offset = that.data.offset || 0;
-      url += app.globalData.top250 + "?start=0&&count=5";
+      url += app.globalData.top250 + "?start="+ that.data.currentNum +"&&count=5";
     } else if (typeId == "usBox") {
-      url += app.globalData.usBox + "?start=0&&count=5";
+      url += app.globalData.usBox + "?start=" + that.data.currentNum +"&&count=5";
     } else {
 
     }
@@ -55,7 +57,14 @@ Page({
     });
     var total = that.data.total || 999;
     // 最多加载50个电影数据
+    console.log(111)
     if (that.data.movies && that.data.movies.length >= 50) {
+      that.data.noMoreData = true;
+      return;
+    }
+    console.log(222)
+    if (that.data.movies && that.data.selectedType === 'usBox'){
+      that.data.noMoreData = true;
       return;
     }
 
@@ -121,6 +130,8 @@ Page({
           movies: movies
         };
         that.data.scrollFlag = true;
+        //刷新that.data.currentNum
+        that.data.currentNum += 5;
         that.setData(readyData);
       },
       fail: function () {

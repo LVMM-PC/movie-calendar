@@ -113,3 +113,10 @@
 .directors {
   margin-top: 20rpx
 }
+.session-selected-bottom {
+  display: block;
+  color: #ccc;
+  text-align: center;
+  font-size: 14px;
+  width: 100%
+}
